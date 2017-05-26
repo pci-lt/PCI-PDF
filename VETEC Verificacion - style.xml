@@ -1,0 +1,176 @@
+<blockTableStyle id="Standard_Outline">
+   <blockAlignment value="LEFT"/>
+   <blockValign value="TOP"/>
+</blockTableStyle>
+<blockTableStyle id="TableFirma">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <lineStyle kind="LINEABOVE" colorName="#424242" start="0,1" stop="-1,1"/>
+</blockTableStyle>
+<blockTableStyle id="TableHeader">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockAlignment value="LEFT" start="1,1" stop="-1,-1"/>
+ <blockFont name="Helvetica" size="8.0"  start="0,0" stop="-1,-1"/>
+ <blockBackground colorName="#BDBDBD" start="0,0" stop="-1,0"/>
+ <lineStyle kind="GRID" colorName="#424242" start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="TableBox">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockAlignment value="LEFT" start="1,1" stop="-1,-1"/>
+ <blockFont name="Helvetica" size="5.0"  start="0,0" stop="-1,-1"/>
+ <lineStyle thickness="0.25"  kind="BOX" colorName="#424242" start="0,0" stop="-1,-1"/>
+ <lineStyle thickness="0.25"  kind="GRID" colorName="#424242" start="1,1" stop="-1,-1"/>
+ <blockLeftPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockRightPadding start="0,0" stop="-1,-1" length="1"/>
+</blockTableStyle>
+<blockTableStyle id="Table2Columns">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockAlignment value="LEFT" start="1,1" stop="-1,-1"/>
+ <blockFont name="Helvetica" size="5.0"  start="0,0" stop="-1,-1"/>
+ <lineStyle kind="linebefore" thickness="0.25" colorName="#424242" start="0,0" stop="0,-1"/>
+ <lineStyle kind="linebefore" thickness="0.25" colorName="#424242" start="2,0" stop="2,-1"/>
+ <blockLeftPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockRightPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockTopPadding start="0,0" stop="-1,-1" length=".25"/>
+ <blockBottomPadding start="0,0" stop="-1,-1" length=".25"/>
+</blockTableStyle>
+<blockTableStyle id="Table6Columns">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockAlignment value="LEFT" start="1,1" stop="-1,-1"/>
+ <blockFont name="Helvetica" size="5.0"  start="0,0" stop="-1,-1"/>
+ <lineStyle kind="linebefore" thickness="0.25" colorName="#424242" start="0,0" stop="0,-1"/>
+ <lineStyle kind="linebefore" thickness="0.25" colorName="#424242" start="6,0" stop="6,-1"/>
+ <blockLeftPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockRightPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockTopPadding start="0,0" stop="-1,-1" length=".25"/>
+ <blockBottomPadding start="0,0" stop="-1,-1" length=".25"/>
+</blockTableStyle>
+<blockTableStyle id="Table4Columns">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockAlignment value="LEFT" start="1,1" stop="-1,-1"/>
+ <blockFont name="Helvetica" size="5.0"  start="0,0" stop="-1,-1"/>
+ <lineStyle kind="linebefore" thickness="0.25" colorName="#424242" start="0,0" stop="0,-1"/>
+ <lineStyle kind="linebefore" thickness="0.25" colorName="#424242" start="4,0" stop="4,-1"/>
+ <blockLeftPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockRightPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockTopPadding start="0,0" stop="-1,-1" length=".25"/>
+ <blockBottomPadding start="0,0" stop="-1,-1" length=".25"/>
+</blockTableStyle>
+<blockTableStyle id="TableDetail">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockFont name="Helvetica" size="5.0"  start="0,0" stop="-1,-1"/>
+ <blockTopPadding start="0,0" stop="-1,-1" length=".25"/>
+ <blockBottomPadding start="0,0" stop="-1,-1" length=".25"/>
+ <blockBackground colorName="#BDBDBD" start="0,0" stop="-1,0"/>
+ <blockLeftPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockRightPadding start="0,0" stop="-1,-1" length="1"/>
+ <lineStyle kind="GRID" thickness="0.25" colorName="#424242" start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="TableDetailYellow">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockFont name="Helvetica" size="5.0"  start="0,0" stop="-1,-1"/>
+ <blockTopPadding start="0,0" stop="-1,-1" length=".25"/>
+ <blockBottomPadding start="0,0" stop="-1,-1" length=".25"/>
+ <blockBackground colorName="#FFFF00" start="0,0" stop="-1,0"/>
+ <blockLeftPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockRightPadding start="0,0" stop="-1,-1" length="1"/>
+ <lineStyle kind="GRID" thickness="0.25" colorName="#424242" start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="TableFotoGroupH">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockFont name="Helvetica" size="8.0"  start="0,0" stop="-1,-1"/>
+ <blockBackground colorName="#BDBDBD" start="0,0" stop="-1,0"/>
+ <lineStyle kind="LINEABOVE" colorName="#424242" start="0,0" stop="-1,-1"/>
+ <lineStyle kind="LINEBEFORE" colorName="#424242" start="0,0" stop="-1,-1"/>
+ <lineStyle kind="LINEAFTER" colorName="#424242" start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="TableVTop">
+ <blockAlignment value="LEFT"/>
+ <blockLeading length="0" />
+ <blockLeftPadding length="0" />
+ <blockRightPadding length="0" />
+ <blockValign value="TOP"/>
+</blockTableStyle>
+<blockTableStyle id="TableVTopGrid">
+ <blockAlignment value="LEFT"/>
+ <blockLeading length="0" />
+ <blockValign value="TOP"/>
+ <blockFont name="Helvetica" size="8.0"  start="0,0" stop="-1,-1"/>
+ <lineStyle kind="GRID" colorName="#424242" start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="TableBody">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <lineStyle kind="GRID" colorName="#ffffff" start="0,0" stop="-1,-1"/>
+ <lineStyle kind="LINEBEFORE" colorName="#424242" start="1,0" stop="1,-1"/>
+ <lineStyle kind="LINEBEFORE" colorName="#424242" start="2,0" stop="2,-1"/>
+ <lineStyle kind="LINEBEFORE" colorName="#424242" start="3,0" stop="3,-1"/>
+ <lineStyle kind="LINEBEFORE" colorName="#424242" start="4,0" stop="4,-1"/>
+ <lineStyle kind="LINEBEFORE" colorName="#424242" start="5,0" stop="5,-1"/>
+ <lineStyle kind="BOX" colorName="#424242" start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="TableGrid">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <blockFont name="Helvetica" size="8.0"  start="0,0" stop="-1,-1"/>
+ <lineStyle kind="GRID" colorName="#424242" start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="TableComment">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <lineStyle kind="GRID" colorName="#424242" start="0,0" stop="-1,-1"/>
+ <lineStyle kind="BOX" colorName="#424242" />
+ <blockBackground colorName="#F0D43B" start="0,0" stop="-1,0"/>
+</blockTableStyle>
+<blockTableStyle id="TableFooter">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <lineStyle kind="GRID" colorName="#424242" start="0,0" stop="-1,-1"/>
+ <blockBackground colorName="#F0D43B" start="0,0" stop="-1,0"/>
+</blockTableStyle>
+<blockTableStyle id="TableWithe">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <lineStyle kind="GRID" colorName="#ffffff" start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="Table Contents">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <lineStyle kind="BOX" colorName="#424242" start="1,0" stop="-1,-1"/>
+ <blockBackground colorName="#F0D43B" start="1,0" stop="-1,0"/>
+</blockTableStyle>
+<blockTableStyle id="TableEmbedd">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <lineStyle kind="LINEBEFORE" colorName="#424242" start="1,0" stop="1,-1"/>
+</blockTableStyle>
+<initialize>
+ <paraStyle name="all" alignment="justify"/>
+</initialize>
+<paraStyle name="PWhite" textColor="black" fontName="Helvetica-Bold" fontSize="8.0" leading="10"  alignment="CENTER"/>
+<paraStyle name="P1L" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+<paraStyle name="P1C" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER"/>
+<paraStyle name="P1CB" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="CENTER" />
+<paraStyle name="P1R" fontName="Helvetica" fontSize="8.0" leading="10" alignment="RIGHT" />
+<paraStyle name="P1LB" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="LEFT"/>
+<paraStyle name="P1RB" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="RIGHT"/>
+<paraStyle name="P2" fontName="Helvetica" fontSize="10.0" leading="10"/>
+<paraStyle name="P2C" fontName="Helvetica" fontSize="10.0" leading="10" alignment="CENTER"/>
+<paraStyle name="P3CB" fontName="Helvetica-Bold" fontSize="12.0" leading="14" alignment="CENTER"/>
+<paraStyle name="P14CB" fontName="Helvetica-Bold" fontSize="14.0" leading="16" alignment="CENTER"/>
+<paraStyle name="Table Contents" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+<paraStyle name="ParagraphLeft" fontName="Helvetica" fontSize="5.0" leading="7" spaceBefore="1" spaceAfter="1" alignment="LEFT"/>
+<paraStyle name="ParagraphLeftN" fontName="Helvetica-Bold" fontSize="5.0" leading="7" spaceBefore="1" spaceAfter="1" alignment="LEFT"/>
+<paraStyle name="ParagraphCenter" fontName="Helvetica" fontSize="5.0" leading="7" spaceBefore="1" spaceAfter="1" alignment="CENTER"/>
+<paraStyle name="ParagraphCenterN" fontName="Helvetica-Bold" fontSize="5.0" leading="7" spaceBefore="1" spaceAfter="1" alignment="CENTER"/>
+<paraStyle name="ParagraphCenterRed" backColor="red" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER"/>
+<paraStyle name="Standard" fontName="Helvetica"/>
+<images/>

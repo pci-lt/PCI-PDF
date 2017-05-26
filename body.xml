@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+{% load PrintFields %}
+{% load set_var %}
+{% load custom_tags %}
+<document filename="Nombre del la Plantilla" xmlns:doc="http://namespaces.zope.org/rml/doc">
+  <pageInfo pageSize="(8.5in, 11in)" doc:example="" />
+  <template  title="Nombre del la Plantilla" author="LinkaForm">
+    <pageTemplate id="first">
+      <frame id="first" x1="0.5cm" y1="0.5cm" width="206mm" height="260mm"/>
+      <pageGraphics>
+        <setFont name="Helvetica" size="7.5"/>
+        <drawCenteredString x="10.5cm" y="27.8cm">
+            {{direccion}}
+        </drawCenteredString>
+        <setFont name="Helvetica" size="8"/>
+
+
+                <!-- Cabecera de documento -->
+                {% Header company_logo parent user form Template meta %}
+      <!-- Pie del documento -->
+        {% Footer user form Template meta %}
+    </pageGraphics>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+     {% autoescape on %}
+      {{ Template.style|safe }}
+    {% endautoescape %}
+  </stylesheet>
+  <story>
+    {% for ffield in form.fields %}
+      {% if ffield.field_id.id == '58c84e76f851c27ca91b3b75' %}
+        {% set label1 = ffield.label %}
+      {% elif ffield.field_id.id == '58c84e76f851c27ca91b3b76' %}
+        {% set label2 = ffield.label %}
+      {% elif ffield.field_id.id == '58c84e76f851c27ca91b3b77' %}
+        {% set label3 = ffield.label %}
+      {% elif ffield.field_id.id == '58c84e76f851c27ca91b3b78' %}
+        {% set label4 = ffield.label %}
+      {% elif ffield.field_id.id == '58c84ffeb43fdd44859c6e06' %}
+        {% set label5 = ffield.label %}
+      {% elif ffield.field_id.id == '58c84eadf851c27ca82e251e' %}
+        {% set label6 = ffield.label %}
+      {% elif ffield.field_id.id == '58c84f2ef851c27ca91b3b79' %}
+        {% set label7 = ffield.label %}
+      {% elif ffield.field_id.id == '58c84f2ef851c27ca91b3b7a' %}
+        {% set label8 = ffield.label %}
+      {% elif ffield.field_id.id == '58c84f2ef851c27ca91b3b7b' %}
+        {% set label9 = ffield.label %}
+      {% endif %}
+    {% endfor %}
+    <blockTable colWidths="16cm, 3.3cm" style="TableGuideCuatro">
+      <tr>
+        <td><para style="P1RB">Identificación (OB;DTTO;ID;OT;SISA):</para></td>
+        <td><para style="P1L">{{ answers.58d3fb05f851c218be6550ed }}</para></td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="1.8cm,3cm,1.7cm,3cm,2cm,2.5cm,1.8cm,3.5cm" style="TableGuideUno">
+      <tr>
+        <td><para style="P1LB">País/Div:</para></td>
+        <td><para style="P1L">MEXICO/SUR</para></td>
+        <td><para style="P1LB">Area/Cd:</para></td>
+        <td><para style="P1L">{{ answers.58c84a1ef851c27ca91b3b72}}</para></td>
+        <td><para style="P1LB">No. Proy.:</para></td>
+        <td><para style="P1L">{{ answers.58c84a9ef851c27ca91b3b74}}</para></td>
+        <td><para style="P1LB">Producto:</para></td>
+        <td><para style="P1L">Bajantes FTTH</para></td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="4.5cm,9cm,2.3cm,3.5cm" style="TableGuideDos">
+      <tr>
+        <td><para style="P1LB">Nombre del supervisor/Insp:</para></td>
+        <td><para style="P1L">{{ answers.58c84dd1b43fdd4483d92ce6}}</para></td>
+        <td><para style="P1LB">Fecha Inicio:</para></td>
+        <td><para style="P1L">{{ meta.start_date|truncatewords:1|cut:'...' }}</para></td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="4.3cm,9.2cm,2.3cm,3.5cm" style="TableGuideTres">
+      <tr>
+        <td><para style="P1LB">Nombre del contratista:</para></td>
+        <td><para style="P1L">PCI</para></td>
+        <td><para style="P1LB">Fecha Fin:</para></td>
+        <td><para style="P1L">{{ meta.start_date|truncatewords:1|cut:'...'  }}</para></td>
+      </tr>
+    </blockTable>
+    {% set foto = 0 %}
+    <spacer length=".2cm"/>
+    <blockTable colWidths="6.7cm,6.7cm,6.7cm" style="TableGuide">
+      <tr>
+<!-- foto pregunta 1 -->
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84e76f851c27ca91b3b75.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84e76f851c27ca91b3b75.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84e76f851c27ca91b3b75.file_url}}">{{ label1 }}  </a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+<!-- foto pregunta 2 -->         
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84e76f851c27ca91b3b76.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84e76f851c27ca91b3b76.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84e76f851c27ca91b3b76.file_url}}">{{ label2 }} </a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+<!-- foto pregunta 3 -->         
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84e76f851c27ca91b3b77.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84e76f851c27ca91b3b77.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84e76f851c27ca91b3b77.file_url}}">{{ label3 }}</a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+<!-- foto pregunta 4 -->         
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84e76f851c27ca91b3b78.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84e76f851c27ca91b3b78.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84e76f851c27ca91b3b78.file_url}}">{{ label4 }}</a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+<!-- foto pregunta 5 -->         
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84ffeb43fdd44859c6e06.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84ffeb43fdd44859c6e06.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84ffeb43fdd44859c6e06.file_url}}">{{ label5 }}</a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+<!-- foto pregunta 6 -->         
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84eadf851c27ca82e251e.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84eadf851c27ca82e251e.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84eadf851c27ca82e251e.file_url}}">{{ label6 }}</a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+<!-- foto pregunta 7 -->         
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84f2ef851c27ca91b3b79.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84f2ef851c27ca91b3b79.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84f2ef851c27ca91b3b79.file_url}}">{{ label7 }}</a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+<!-- foto pregunta 8 -->         
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84f2ef851c27ca91b3b7a.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84f2ef851c27ca91b3b7a.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84f2ef851c27ca91b3b7a.file_url}}">{{ label8 }}</a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+<!-- foto pregunta 9 -->         
+        {% for item in answers.58c84dd1b43fdd4483d92ce7 %}  
+          {% if item.58c84f2ef851c27ca91b3b7b.file_url %}
+            <td>
+             <imageAndFlowables imageName="{{item.58c84f2ef851c27ca91b3b7b.file_url|cut:'jpg' }}thumbnail"  imageWidth="6.5cm" imageHeight="6cm" imageSide="left" />
+             <para style="ParagraphCenter"> <a href="{{item.58c84f2ef851c27ca91b3b7b.file_url}}">{{ label9 }}</a></para>
+            </td>
+            {% arithmetic 'foto' 'foto' '+' '1' %}
+            {% if foto == 3 %}
+              </tr>
+              {% set foto = 0 %}
+              <tr>
+            {% endif %} 
+          {% endif %}
+        {% endfor %}
+      {% if foto == 0 %}
+        <td></td><td></td><td></td>
+      {% elif foto == 1 %}
+        <td></td><td></td>
+      {% elif foto == 2 %}
+        <td></td>
+      {% endif %}
+      </tr>      
+    </blockTable>  
+    {% autoescape on %}
+  {{ Template.footer|safe }}
+{% endautoescape %}
+  </story>
+</document>

@@ -1,0 +1,15 @@
+<image x=".8cm" y="27.5cm"    width="140" height="35" file="https://f001.backblazeb2.com/file/app-linkaform/public-client-1259/11715/58cb1edcb43fdd76ce884e2b/fa25e3e1ab4a22a2bd0abe54a26e8da1ae5b8026.png" />
+<fill color="#000000"/>
+<setFont name="Helvetica-Bold" size="14"/>
+<setFont name="Helvetica-Bold" size="18" color="white"/>
+<fill color="black"/>
+<stroke color="black"/>
+<rect x="6cm" y="26.7cm" width="9.8cm" height="3cm" fill="yes" stroke="no"/>
+<fill color="white"/>
+<drawString x="7cm" y="28.4cm">MEMORIA FOTOGRAFICA </drawString>
+<setFont name="Helvetica-Bold" size="12"/>
+<drawString x="8.3cm" y="27.6cm">Producto Bajantes FTTH </drawString>
+<setFont name="Helvetica-Bold" size="8"/>
+<fill color="black"/>
+<drawString x="17cm" y="28cm">FR-PE-15   REV. 02</drawString>
+<lines>.8cm 26.7cm 20cm 26.7cm</lines>
