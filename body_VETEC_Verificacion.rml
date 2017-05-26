@@ -1,0 +1,2535 @@
+<?xml version="1.0"?>
+{% load PrintFields %}
+{% load set_var %}
+{% load custom_tags %}
+<document filename="VETEC" xmlns:doc="http://namespaces.zope.org/rml/doc">
+  <pageInfo pageSize="(210mm,260mm)" doc:example="" />
+  <template  title="Verificacion VETEC" author="LinkaForm">
+    <pageTemplate id="first">
+      <frame id="first" x1="0cm" y1="0.5cm" width="210mm" height="279mm"/>
+      <pageGraphics>
+        <setFont name="Helvetica" size="7.5"/>
+        <setFont name="Helvetica" size="8"/>
+                <!-- Cabecera de documento -->
+                {% Header company_logo parent user form Template meta %}
+        <!-- Pie del documento -->
+
+        {% Footer user form Template meta %}
+      </pageGraphics>
+    </pageTemplate>
+
+  </template>
+  <stylesheet>
+     {% autoescape on %}
+      {{ Template.style|safe }}
+    {% endautoescape %}
+  </stylesheet>
+  <story>
+    {% for ffield in form.fields %}
+      {% if ffield.field_id.id == 'f1166900a030000000000001' %}
+        {% set label1 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a040000000000001' %}
+        {% set label2 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a040000000000002' %}
+        {% set label3 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a040000000000003' %}
+        {% set label4 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a040000000000004' %}
+        {% set label5 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a040000000000005' %}
+        {% set label6 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a050000000000001' %}
+        {% set label7 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a050000000000002' %}
+        {% set label8 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a050000000000003' %}
+        {% set label9 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a050000000000004' %}
+        {% set label10 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a050000000000005' %}
+        {% set label11 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a050000000000006' %}
+        {% set label12 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a050000000000007' %}
+        {% set label13 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000001' %}
+        {% set label14 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000002' %}
+        {% set label15 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000003' %}
+        {% set label16 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000004' %}
+        {% set label17 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000005' %}
+        {% set label18 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000006' %}
+        {% set label19 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000007' %}
+        {% set label20 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000008' %}
+        {% set label21 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a060000000000009' %}
+        {% set label22 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a070000000000001' %}
+        {% set label23 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a070000000000002' %}
+        {% set label24 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a070000000000003' %}
+        {% set label25 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a070000000000004' %}
+        {% set label26 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a080000000000001' %}
+        {% set label27 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a080000000000002' %}
+        {% set label28 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a080000000000003' %}
+        {% set label29 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000001' %}
+        {% set label30 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000002' %}
+        {% set label31 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000003' %}
+        {% set label32 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000004' %}
+        {% set label33 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000005' %}
+        {% set label34 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000006' %}
+        {% set label35 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000007' %}
+        {% set label36 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000008' %}
+        {% set label37 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000009' %}
+        {% set label38 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000010' %}
+        {% set label39 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000011' %}
+        {% set label40 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000012' %}
+        {% set label41 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000013' %}
+        {% set label42 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000014' %}
+        {% set label43 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a090000000000015' %}
+        {% set label44 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000001' %}
+        {% set label45 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000002' %}
+        {% set label46 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000003' %}
+        {% set label47 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000004' %}
+        {% set label48 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000005' %}
+        {% set label49 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000006' %}
+        {% set label50 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000007' %}
+        {% set label51 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000008' %}
+        {% set label52 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000009' %}
+        {% set label53 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000010' %}
+        {% set label54 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000011' %}
+        {% set label55 = ffield.label %}
+      {% elif ffield.field_id.id == 'f1166900a100000000000012' %}
+        {% set label56 = ffield.label %}
+      {% endif %}
+    {% endfor %}
+    <blockTable colWidths="2.5cm,9.4cm,2.0cm,2.0cm,2.0cm,1.9cm" style="Table6Columns">
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Folio:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000001 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Tipo de Orden:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000002 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Etapa
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000003 }}
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Fecha de Posteo:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000004 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Clase de Servicio:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000005 }}
+          </para>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            COPE:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000006 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Distrito:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000007 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Terminal FO:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000008 }}
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Teléfono:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000009 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Puerto:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000010 }}
+          </para>
+        </td>
+        <td>
+        </td>
+        <td>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="2.5cm,17.3cm" style="Table2Columns">
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Nombre del Cliente:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000011 }}
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Domicilio:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000012 }}
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="6.45cm,5.45cm,4.45cm,3.45cm" style="Table4Columns">
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Nombre del Técnico que realizó el trabajo (Alta, Migración, Queja):
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000013 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Número de Control del Técnico:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000014 }}
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Empresa del Técnico:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000015 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Número de Certificación del Técnico:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000016 }}
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Velocidad Medida de Bajada:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000018 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Folio Tec:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000019 }}
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Velocidad Medida de Subida:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000018 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Hora de Llegada:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000022 }}
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeftN">
+            Fecha Supervisión de Calidad:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000021 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeftN">
+            Hora de Termino:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a010000000000023 }}
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="3.9cm,2.65cm,3.0cm,2.30cm,2.65cm,2.65cm,2.65cm" style="TableBox">
+      <tr>
+        <td>
+          <para style="ParagraphCenterN">
+            ¿Cual fue la causa raíz de la falla?
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Instalación Fuera de Forma
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Falla Ocasionada por el Cliente
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            ONT
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Plataforma VSI
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Sistemas y Aprovisionamiento
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Otra (Especifique)
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            (Sólo aplica para Quejas)
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a020000000000001 == 'Instalación Fuera de Forma'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a020000000000001 == 'Falla Ocasionada por el Cliente'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a020000000000001 == 'ONT'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a020000000000001 == 'Plataforma VSI'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a020000000000001 == 'Sistemas y Aprovisionamiento'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a020000000000001 == 'Otra (Especifique)'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">#</para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Aspectos Técnicos
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Aérea
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Canalizada
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Puntos de Ponderaición
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">1</para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          {{  label1 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Modem óptico
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Sí
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            No
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            2
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label2 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000001 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000001 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            3
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label3 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a04000000000002 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000002 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            4
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label4 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000003 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000003 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            5
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label5 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000004 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000004 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            6
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label6 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000005 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000005 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Jumerp y Roseta Óptica
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Sí
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            No
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            7
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label7 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a050000000000001 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a050000000000001 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            8
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label8 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a050000000000002 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000002 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            9
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label9 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a050000000000003 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000003 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            10
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label10 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000004 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000004 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+           11
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label11 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000005 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000005 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            12
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label12 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a050000000000006 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a050000000000006 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            13
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label13 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a050000000000007 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a050000000000007 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Bajante óptico (Acometida)
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Sí
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            No
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            14
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label14 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000001 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000001 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            15
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label15 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000002 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000002 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            16
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label16 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000003 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000003 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            17
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label17 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000004 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a040000000000004 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            18
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label18 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000005 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000005 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            19
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label19 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000006 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000006 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            20
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label20 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000007 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000007 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            21
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label21 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000008 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000008 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            22
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label22 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000009 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a060000000000009 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Red Secundaria FTTH
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Sí
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            No
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            23
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label24 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a070000000000001 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a070000000000001 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            24
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label25 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a070000000000002 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a070000000000002 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            25
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label25 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a070000000000003 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a070000000000003 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            26
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label26 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a070000000000004 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a070000000000004 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Voz sobre Infinitum
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Sí
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            No
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            27
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label27 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a080000000000001 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a080000000000001 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            28
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label28 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a080000000000002 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a080000000000002 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            29
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label29 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a080000000000003 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a080000000000003 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Aspectos Generales
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Sí
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            No
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            30
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label30 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000001 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000001 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            31
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label31 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000002 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000002 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            32
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label32 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000003 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000003 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            33
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label33 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000004 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000004 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            34
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label34 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000005 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000005 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            35
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label3 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000006 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000006 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            36
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label3 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000007 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000007 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            37
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label37 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000008 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000008 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            38
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label38 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000009 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000009 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            39
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label39 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000010 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000010 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            40
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label40 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000011 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000011 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            41
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label41 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000012 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000012 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            42
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label42 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000013 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000013 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            43
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label43 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000014 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000014 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            44
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label44 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000015 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a090000000000015 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Experiencia del cliente
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            45
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label45 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000001 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000001 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            46
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label46 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000002 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000002 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            47
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label47 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000003 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000003 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            48
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label48 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {{ answers.f1166900a100000000000004 }}
+          </para>
+        </td>
+        <td>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            49
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label49 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000005 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000005 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            50
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label50 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000006 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000006 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            51
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label51 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000007 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000007 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            52
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label52 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000008 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000008 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            53
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label53 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000009 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000009 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            54
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label54 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000010 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000010 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            55
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label55 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000011 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000011 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            56
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ label56 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000012 == 'Sí'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenter">
+            {% if answers.f1166900a100000000000012 == 'No'%}
+            X
+            {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,12.8cm,1.6cm,1.6cm,3.3cm" style="TableDetail">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,19.3cm" style="TableDetail">
+      <tr>
+        <td>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+          Observaciones de la causa raía
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          57
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a110000000000001 }}
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,19.3cm" style="TableDetail">
+      <tr>
+        <td>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+           Correcciones a realizar
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+            58
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {{ answers.f1166900a120000000000001 }}
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,19.3cm" style="TableDetailYellow">
+      <tr>
+        <td>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+           Observaciones Experiencia del Cliente Satisfecho
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="0.5cm,8.7cm,4.6cm,6.0cm" style="TableDetailYellow">
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          59
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Uso de Instructivo de Atención a Clientes.
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Uniforme:
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphCenterN">
+            Vehículo:
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="ParagraphLeft">
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+          {{ answers.f1166900a130000000000001 }}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+             {% if answers.58cae503b43fdd5233dd7c62 == 'Playera' %}
+              Playera: OK
+              {% else %}
+              Playera: NO
+             {% endif %}
+             {% if answers.58cae503b43fdd5233dd7c62 == 'Pantalón' %}
+              Pantalon: OK
+             {% else %}
+              Pantalon: NO
+             {% endif %}
+          </para>
+        </td>
+        <td>
+          <para style="ParagraphLeft">
+            {% if answers.f1166900a130000000000002 == 'Limpio' %}
+              Limpio: OK
+            {% else %}
+              Limpio: NO
+            {% endif %}
+          </para>
+          <para style="ParagraphLeft">
+            {% if answers.f1166900a130000000000002 == 'Porta Escaleras' %}
+              Porta Escaleras: OK
+            {% else %}
+              Porta Escaleras: NO
+            {% endif %}
+          </para>
+          <para style="ParagraphLeft">
+            {% if answers.f1166900a130000000000002 == 'Tipo Sedán con Logos' %}
+              Tipo Sedán con Logos: OK
+            {% else %}
+              Tipo Sedán con Logos: NO
+            {% endif %}
+          </para>
+          <para style="ParagraphLeft">
+            {% if answers.f1166900a130000000000002 == 'Kit de Seguridad (conos, cinta preventiva y extinguidor)' %}
+              Kit de Seguridad (conos, cinta preventiva y extinguidor): OK
+            {% else %}
+              Kit de Seguridad (conos, cinta preventiva y extinguidor): NO
+            {% endif %}
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    {% autoescape on %}
+    {{ Template.style|safe }}
+{% endautoescape %}
+  </story>
+</document>

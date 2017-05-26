@@ -1,0 +1,6 @@
+<image x=".8cm" y="28.4cm"    width="60" height=".5cm" file="https://f001.backblazeb2.com/file/app-linkaform/public-client-1259/11715/58cb1edcb43fdd76ce884e2b/63e40d62df8dd2cab72766a30f3967f679e7c75b.thumbnail" />
+<fill color="#000000"/>
+<setFont name="Helvetica-Bold" size="8"/>
+<stroke color="black"/>
+<rect x=".6cm" y="28.4cm" width="19.8cm" height=".6cm" stroke="yes"/>
+<drawCenteredString x="10cm" y="28.6cm">Formato de Verificacion Tecnica (VETEC) para instalaciones INFINITUM FTTH </drawCenteredString>

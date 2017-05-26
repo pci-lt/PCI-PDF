@@ -1,0 +1,273 @@
+<?xml version="1.0" ?>
+{% load PrintFields %}
+{% load set_var %}
+{% set falla = 0 %}
+	<document filename="Listado de Tecnicos.pdf" invariant="1">
+   <pageInfo pageSize="(200mm,260mm)"/>
+	  <template pageSize="(210mm,297mm)" title="Orden de Cambaceo"  author="Luis Torres">
+	    <pageTemplate id="first">
+	      <frame id="first" x1="0.5cm" y1="1.5cm" width="200mm" height="235mm"/>
+	      <pageGraphics>
+	        <setFont name="Helvetica" size="8"/>
+	        <!-- Cabecera de documento -->
+	        {% Header company_logo parent user form Template meta %}
+	        <!-- Pie del documento -->
+	        {% Footer user form Template meta %}
+	      </pageGraphics>
+	    </pageTemplate>
+
+	  </template>
+	  <stylesheet>
+	     {% autoescape on %}
+	      {{ Template.style|safe }}
+	    {% endautoescape %}
+	  </stylesheet>
+
+	<story>
+
+		<blockTable colWidths="192mm">
+			<tr>
+				<td background="dodgerblue"><para style="P14CB">ORDEN DE SERVICIO</para></td>
+			</tr>
+		</blockTable>
+		<blockTable colWidths="33mm, 48mm, 37mm, 28mm, 45mm">
+			<tr>
+				<td>Teléfono: </td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b7e }}</td>
+				<td></td>
+				<td>Hora de encuesta: </td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b7f }}</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td>Fecha: </td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b80 }}</td>
+			</tr>
+		</blockTable>
+		<blockTable colWidths="23mm, 38mm, 15mm, 33mm, 12mm, 18mm, 16mm, 36mm">
+			<tr>
+				<td>Número de OS: </td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b81 }}</td>
+				<td>Pisaplex: </td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b82 }}</td>
+				<td>Tipo: </td>
+				<td> {{answers.58c88e2eb43fdd6fcd870b83}}</td>
+				<td>Folio Tec: </td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b84}}</td>
+			</tr>
+		</blockTable>
+
+		<blockTable colWidths="38mm, 153mm">
+			<tr>
+				<td>Nombre del contratante:</td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b85 }} </td>
+			</tr>
+			<tr>
+				<td>Dirección:</td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b86 }} </td>
+			</tr>
+			<tr>
+				<td>Entre calles:</td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b87 }} </td>
+			</tr>
+			<tr>
+				<td>Colonia:</td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b88 }} </td>
+			</tr>
+		</blockTable>
+
+
+		<blockTable colWidths="19mm, 60mm, 40mm, 17mm, 55mm">
+			<tr>
+				<td>Edificio:</td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b89 }} </td>
+				<td></td>
+				<td>Depto:</td>
+				<td> {{ answers.58c88e2eb43fdd6fcd870b8a }}</td>
+			</tr>
+		</blockTable>
+
+		<blockTable style="medicion" colWidths="32mm, 32mm, 32mm, 32mm, 32mm, 32mm, 32mm">
+			<tr>
+				<td><para style="P2C">Distrito</para></td>
+				<td><para style="P2C">Terminal</para></td>
+				<td><para style="P2C">Puerto</para></td>
+				<td><para style="P2C">Potencia terminal</para></td>
+				<td><para style="P2C">Potencia roseta</para></td>
+				<td><para style="P2C">Navegación</para></td>
+			</tr>
+			<tr>
+				<td><para style="P2C">{{ answers.58c88e2eb43fdd6fcd870b8b }}</para></td>
+				<td><para style="P2C">{{ answers.58c88e2eb43fdd6fcd870b8c }}</para></td>
+				<td><para style="P2C">{{ answers.58c88e2eb43fdd6fcd870b8d }}</para></td>
+				<td><para style="P2C">{{ answers.58c88e2eb43fdd6fcd870b8e }}</para></td>
+				<td><para style="P2C">{{ answers.58c88e2eb43fdd6fcd870b8f }}</para></td>
+				<td><para style="P2C">{{ answers.58c88e2eb43fdd6fcd870b90 }}</para></td>
+			</tr>
+		</blockTable>
+
+		<blockTable colWidths="191mm">
+			<tr>
+				<td background="dodgerblue"><para style="P14CB">DATOS DE LA ONT INSTALADA</para></td>
+			</tr>
+		</blockTable>
+
+		<blockTable colWidths="97mm, 94mm">
+			<tr>
+				<td>
+					<blockTable colWidths="30mm,  66mm">
+						<tr>
+							<td>Númbre de Serie</td>
+							<td>{{ answers.58c88f83b43fdd6fca938b0e }}</td>
+						</tr>
+						<tr>
+							<td>Alfanumerico</td>
+							<td>{{ answers.58c88f83b43fdd6fca938b0f }}</td>
+						</tr>
+						<tr>
+							<td>Key</td>
+							<td>{{ answers.58c88f83b43fdd6fca938b10 }}</td>
+						</tr>
+					</blockTable>
+				</td>
+				<td>
+					<blockTable colWidths="94mm" rowHeights="8mm, 11mm">
+						<tr>
+							<td><para style="P2C">Observaciones:</para></td>
+						</tr>
+						<tr>
+							<td><para>{{ answers.58c88f83b43fdd6fca938b11 }}</para></td>
+						</tr>
+					</blockTable>
+				</td>
+			</tr>
+		</blockTable>
+
+		<blockTable style="firmas" colWidths="49mm, 7mm, 66mm, 7mm, 62mm" >
+			<tr>
+				<td>{% if answers.58c88f83b43fdd6fca938b13.file_url %}
+             <imageAndFlowables imageName="{{answers.58c88f83b43fdd6fca938b13.file_url}}"  imageWidth="80" imageHeight="40" imageSide="left" />
+          {% endif %}</td>
+				<td></td>
+				<td>{% if answers.58c8926cf851c208e4a4e677.file_url %}
+             <imageAndFlowables imageName="{{answers.58c8926cf851c208e4a4e677.file_url}}"  imageWidth="80" imageHeight="40" imageSide="left" />
+          {% endif %}</td>
+				<td></td>
+				<td>{% if answers.58c8926cf851c208e4a4e679.file_url %}
+						 <imageAndFlowables imageName="{{answers.58c8926cf851c208e4a4e679.file_url}}"  imageWidth="80" imageHeight="40" imageSide="left" />
+					{% endif %}</td>
+			</tr>
+			<tr>
+				<td><para style="P2C">{{ answers.58c88f83b43fdd6fca938b12 }}</para></td>
+				<td></td>
+				<td><para style="P2C">{{ answers.58c8926cf851c208e4a4e676 }}</para></td>
+				<td></td>
+				<td><para style="P2C">{{ answers.58c8926cf851c208e4a4e678 }}</para></td>
+			</tr>
+			<tr>
+				<td><para style="P2C">Nombre y Firma</para></td>
+				<td></td>
+				<td><para style="P2C">Recibí servicio de conformidad  Nombre y firma (Cliente)</para></td>
+				<td></td>
+				<td><para style="P2C">No deseo el servicio. Nombre y firma (Cliente)</para></td>
+			</tr>
+		</blockTable>
+
+		<blockTable colWidths="42mm, 31mm, 2mm, 34mm, 42mm, 2mm, 13mm, 25mm">
+			<tr>
+				<td>MATERIAL INSTALADO: </td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Argolla</td>
+				<td background="lightblue"><para alignment="CENTER">{{ answers.58c8926cf851c208e4a4e67b }}</para></td>
+				<td></td>
+				<td>Modem</td>
+				<td background="lightblue">{{ answers.58dd8c85f851c233fcd99b3d }}</td>
+				<td></td>
+				<td>S/N</td>
+				<td background="lightblue"><para fontsize="13"> {{ answers.58d41453b43fdd6ca69b41bf }} </para></td>
+			</tr>
+			<tr>
+				<td>Caja Excedente</td>
+				<td background="lightcyan">{{ answers.58c8926cf851c208e4a4e67c }}</td>
+				<td></td>
+				<td>Cordon Circula F.O.</td>
+				<td background="lightcyan"> {{ answers.58c8926cf851c208e4a4e683 }}</td>
+				<td></td>
+				<td>S/N</td>
+				<td background="lightcyan"></td>
+			</tr>
+			<tr>
+				<td>Cierre Conexión</td>
+				<td background="lightblue">{{ answers.58c8926cf851c208e4a4e67d }}</td>
+				<td></td>
+				<td>Roseta óptica</td>
+				<td background="lightblue">{{ answers.58c8926cf851c208e4a4e684 }}</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Cincho negro</td>
+				<td background="lightcyan">{{ answers.58c8926cf851c208e4a4e67e }}</td>
+				<td></td>
+				<td>Sello Pasamuros</td>
+				<td background="lightcyan">{{ answers.58c8926cf851c208e4a4e685 }}</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Cinta de aislar</td>
+				<td background="lightblue">{{ answers.58c8926cf851c208e4a4e67f }}</td>
+				<td></td>
+				<td>Sujetador con Clavo</td>
+				<td background="lightblue">{{ answers.58c8926cf851c208e4a4e686 }}</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Clip Adherible</td>
+				<td background="lightcyan">{{ answers.58c8926cf851c208e4a4e680 }}</td>
+				<td></td>
+				<td>Taquete</td>
+				<td background="lightcyan">{{ answers.58c8926cf851c208e4a4e687 }}</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Cadena para Distribución</td>
+				<td background="lightblue">{{ answers.58c8926cf851c208e4a4e681 }}</td>
+				<td></td>
+				<td>Tensor con gancho</td>
+				<td background="lightblue">{{ answers.58c8926cf851c208e4a4e688 }}</td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</blockTable>
+		<para>Nombre del Técnico: {{ answers.58c89331b43fdd6fcd870b92}}</para>
+
+	</story>
+</document>

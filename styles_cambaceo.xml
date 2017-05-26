@@ -1,0 +1,48 @@
+<blockTableStyle id="Standard_Outline">
+   <blockAlignment value="LEFT"/>
+   <blockValign value="TOP"/>
+</blockTableStyle>
+<blockTableStyle id="herramientas">
+ <blockAlignment value="LEFT"/>
+ <blockValign value="TOP"/>
+ <blockAlignment value="LEFT" start="0,0" stop="0,-1"/>
+ <blockFont name="Helvetica" size="10.0"  start="0,0" stop="-1,-1"/>
+</blockTableStyle>
+<blockTableStyle id="Table4Columns">
+ <blockAlignment value="CENTER"/>
+ <blockValign value="TOP"/>
+ <blockAlignment value="LEFT" start="1,1" stop="-1,-1"/>
+ <blockLeftPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockRightPadding start="0,0" stop="-1,-1" length="1"/>
+ <blockTopPadding start="0,0" stop="-1,-1" length=".25"/>
+ <blockBottomPadding start="0,0" stop="-1,-1" length=".25"/>
+</blockTableStyle>
+<initialize>
+ <paraStyle name="all" alignment="justify"/>
+</initialize>
+<paraStyle name="PWhite" textColor="black" fontName="Helvetica-Bold" fontSize="8.0" leading="10"  alignment="CENTER"/>
+<paraStyle name="P1L" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+<paraStyle name="P1C" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER"/>
+<paraStyle name="P1CB" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="CENTER" />
+<paraStyle name="P1R" fontName="Helvetica" fontSize="8.0" leading="10" alignment="RIGHT" />
+<paraStyle name="P1LB" fontName="Helvetica-Bold" fontSize="9.0" leading="10" alignment="LEFT"/>
+<paraStyle name="P1RB" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="RIGHT"/>
+<paraStyle name="P2" fontName="Helvetica" fontSize="10.0" leading="10"/>
+<paraStyle name="P2C" fontName="Helvetica" fontSize="10.0" leading="10" alignment="CENTER"/>
+<paraStyle name="P3CB" fontName="Helvetica-Bold" fontSize="12.0" leading="14" alignment="CENTER"/>
+<paraStyle name="P14CB" fontName="Helvetica-Bold" fontSize="14.0" leading="16" alignment="CENTER"/>
+<paraStyle name="Table Contents" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+<paraStyle name="ParagraphLeft" fontName="Helvetica" fontSize="5.0" leading="7" spaceBefore="1" spaceAfter="1" alignment="LEFT"/>
+<paraStyle name="ParagraphLeftN" fontName="Helvetica-Bold" fontSize="5.0" leading="7" spaceBefore="1" spaceAfter="1" alignment="LEFT"/>
+<paraStyle name="ParagraphCenter" fontName="Helvetica" fontSize="5.0" leading="7" spaceBefore="1" spaceAfter="1" alignment="CENTER"/>
+<paraStyle name="ParagraphCenterN" fontName="Helvetica-Bold" fontSize="5.0" leading="7" spaceBefore="1" spaceAfter="1" alignment="CENTER"/>
+<paraStyle name="ParagraphCenterRed" backColor="red" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER"/>
+<paraStyle name="Standard" fontName="Helvetica"/>
+<paraStyle name="centrado"
+  alignment="center" />
+<!-- Estilo de Títulos -->
+<paraStyle name="titulo"
+  alignment="center"
+  fontSize="14"
+  textColor="white" />
+<images/>

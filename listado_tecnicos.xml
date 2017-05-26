@@ -1,0 +1,415 @@
+<?xml version="1.0" ?>
+{% load PrintFields %}
+<document filename="Listado de Tecnicos.pdf" invariant="1">
+   <pageInfo pageSize="(200mm,260mm)"/>
+      <template pageSize="(210mm,297mm)" title="Orden de Servicio Terminix" author="LinkaForm">
+        <pageTemplate id="first">
+          <frame id="first" x1="0.5cm" y1="2cm" width="200mm" height="254mm"/>
+          <pageGraphics>
+            <setFont name="Helvetica" size="7.5"/>
+            <setFont name="Helvetica" size="8"/>
+            <!-- Cabecera de documento -->
+            {% Header company_logo parent user form Template meta %}
+            <!-- Pie del documento -->
+            {% Footer user form Template meta %}
+          </pageGraphics>
+        </pageTemplate>
+
+      </template>
+      <stylesheet>
+         {% autoescape on %}
+          {{ Template.style|safe }}
+        {% endautoescape %}
+      </stylesheet>
+
+    <story>
+
+        <!-- Inicia Tabla de control -->
+        <blockTable style="herramientas" colWidths="25mm,58mm,15mm,57mm">
+            <tr>
+                <td>Supervisor:</td>
+                <td>{{ answers.59108903f851c2592aea7e95 }}</td>
+                <td>No. Tel:</td>
+                <td>{{ answers.59108903f851c2592aea7e96}}</td>
+            </tr>
+            <tr>
+                <td>Correo</td>
+                <td>{{ answers.5911f713b43fdd113337a331 }} </td>
+                <td>Fecha:</td>
+                <td>{{ answers.5911f713b43fdd113337a332 }}</td>
+            </tr>
+        </blockTable>
+
+        <!-- Inicia Tabla de Datos personales -->
+
+        <blockTable colWidths="193mm">
+            <tr>
+                <td background="aliceblue" align="center">
+                    <h3>Datos personales</h3>
+                </td>
+            </tr>
+        </blockTable>
+        <blockTable style="herramientas" colWidths="50mm,130mm">
+            <tr>
+                <td>
+                    {% if answers.58db01ccb43fdd5c1419dae4.file_url %}
+                      <imageAndFlowables imageName="{{answers.58db01ccb43fdd5c1419dae4.file_url}}"  imageWidth="100" imageHeight="100" imageSide="left" />
+                    {% endif %}
+                </td>
+                <td>
+                    <blockTable  style="herramientas" colWidths="38mm,92mm">
+                        <!--  aqui va la información del tecnico   -->
+                        <tr>
+                            <td><para style="P1LB"><b>Nombre completo</b></para></td>
+                            <td><para style="P1L">{{ answers.f1216500a010000000000004 }} </para> {{ answers.f1216500a010000000000005 }} {{answers.f1216500a010000000000006}} </td>
+                        </tr>
+                        <tr>
+                            <td><para style="P1LB"><b>No. Credencial Empresa</b></para></td>
+                            <td><para style="P1L">{{ answers.58db02e1f851c269dedd27ec }} </para></td>
+                        </tr>
+
+                        <tr>
+                            <td><para style="P1LB"><b>Fecha de Ingreso</b></para></td>
+                            <td>{{ answers.590cdf33f851c25926110728 }}</td>
+                        </tr>
+                        <tr>
+                            <td><para style="P1LB"><b>No. Certificación</b></para></td>
+                            <td><para style="P1L">
+                                    {%if answers.f1216500a010000000000009 %} {{answers.f1216500a010000000000009}} {%endif%}
+                                    {%if answers.f1216500a010000000000010 %} {{answers.f1216500a010000000000010}} {%endif%}
+                                </para></td>
+                        </tr>
+                        <tr>
+                            <td><para style="P1LB"><b>Tipo de Certificacion</b></para></td>
+                                <td><para style="P1L">
+                                    {% if answers.590cdf33f851c25926110725 == "Sí" and answers.590cdf33f851c25926110726 == "Sí" %} Hibrido
+                                    {% elif answers.590cdf33f851c25926110725 == "Sí" %} Fibra 
+                                    {% elif answers.590cdf33f851c25926110726 == "Sí" %} Cobre {%endif%}
+                                </para></td>
+                        </tr>
+                        <tr>
+                            <td><para style="P1LB"><b>RFC</b></para></td>
+                            <td><para style="P1L">{{ answers.f1216500a010000000000002 }} </para></td>
+                        </tr>
+                        <tr>
+                            <td><para style="P1LB"><b>No. Credencial IFE</b></para></td>
+                            <td> <para style="P1L">{{ answers.5911f713b43fdd113337a333 }} </para></td>
+                        </tr>
+                    </blockTable>
+                </td>
+            </tr>
+        </blockTable>
+
+
+        <!-- Aquí inicia el Inventario de Herramienta -->
+        <blockTable colWidths="193mm">
+          <tr>
+            <td background="aliceblue" align="center">
+              <h3>Inventario de Herramienta</h3>
+            </td>
+          </tr>
+        </blockTable>
+        <blockTable style="herramientas2" colWidths="58mm,6mm,58mm,6mm,58mm,6mm" >
+            <tr>
+                <td><para style="P1LB">Roto Martillo</para></td>
+                <td >{%if answers.590b8948f851c2528959f210 == 'Sí' %}X{% endif %}</td>
+                <td><para style="P1LB">Escalera de3 3.5 Metros</para></td>
+                <td >{%if answers.590b8948f851c2528959f218 == 'Sí' %}X{% endif %}</td>
+                <td><para style="P1LB">Escalera de 7.5 Metros</para></td>
+                <td >{%if answers.5910b5c9f851c20ab687d772 == 'Sí' %}X{% endif %}</td>
+            </tr>
+            <tr>
+                <td><para style="P1LB">Brocas 1/4, 3/8, 1/2, 905x305mm</para></td>
+                <td >{%if answers.590b8948f851c2528959f212 == 'Sí' %}X{% endif %}</td>
+                <td><para style="P1LB">Porta Herramienta</para></td>
+                <td >{%if answers.5910b5c9f851c20ab687d773 == 'Sí' %}X{% endif %}</td>
+                <td><para style="P1LB">Bandola con Arnes</para></td>
+                <td >{%if answers.590b8948f851c2528959f21a == 'Sí' %}X{% endif %}</td>
+            </tr>
+            <tr>
+            
+                    <td><para style="P1LB">Amplificador y Gnerador de Tono(Pollo) </para></td>
+                    <td >{%if answers.590b8948f851c2528959f21d == 'Sí' %}X{% endif %}</td>
+                    <td><para style="P1LB">Entorchador y Desentorchador</para></td>
+                    <td >{%if answers.590b8948f851c2528959f21b == 'Sí' %}X{% endif %}</td>
+                    <td><para style="P1LB">Pinsas de corte, Punta y de Electricista </para></td>
+                    <td >{%if answers.590b8948f851c2528959f214 == 'Sí' or answers.590ce558f851c2592611072d == 'Sí' or answers.5910b5c9f851c20ab687d771  %}X{% endif %}</td>
+            
+            </tr>
+            <tr>
+                <td><para style="P1LB">Puntas de Prueba Rocket y/o Tropical</para></td>
+                <td >{%if answers.590b8948f851c2528959f21c == 'Sí' %}X{% endif %}</td>
+                <td><para style="P1LB">Guía de Acero con Maneral </para></td>
+                <td >{%if answers.590b8948f851c2528959f215 == 'Sí' %}X{% endif %}</td>
+                <td><para style="P1LB">Microteléfono </para></td>
+                <td >{%if answers.590b8948f851c2528959f21e == 'Sí' %}X{% endif %}</td>
+            </tr>
+            <tr>
+                <td><para style="P1LB">Desarmador Plano </para></td>
+                <td >{%if answers.5911f1f1f851c20ec95547cc == 'Sí' %}X{% endif %}</td>
+                <td><para style="P1LB">Dasarmador Cruz  </para></td>
+                <td >{%if answers.590b8948f851c2528959f211 == 'Sí' %}X{% endif %}</td>
+                <td><para style="P1LB">Pluma Limpiadora  </para></td>
+                <td >{%if answers.5911f1f1f851c20ec95547cd == 'Sí' %}X{% endif %}</td>
+            </tr>
+            <tr>
+                <td><para style="P1LB">Martillo de Uña </para></td>
+                <td >{% if answers.590b8948f851c2528959f213 == "Sí" %}X{% endif%}</td>
+                <td><para style="P1LB">Llave Hexagonal </para></td>
+                <td >{% if answers.590b8948f851c2528959f216 == "Sí" %}X{% endif%}</td>
+                <td><para style="P1LB">Medidor de Potencia  </para></td>
+                <td >{%if answers.590b79ccb43fdd0c2d2f37b6 == "Sí" %}X{% endif %}</td>
+            </tr>
+        </blockTable>
+        <blockTable  style="herramientas2" colWidths="20mm,6mm,13mm,30mm,123mm" >
+        <tr>
+                <td><para style="P1LB">Smart Class  </para></td>
+                <td >{%if answers.590cd3e9f851c25927f4cbcd == "Sí" %}X{% endif %}</td>
+                <td><para style="P1LB">Serie:  </para></td>
+                <td >{{ answers.590cd3e9f851c25927f4cbce}}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><para style="P1LB">Compa  </para></td>
+                <td >{%if answers.590cd3e9f851c25927f4cbcb == "Sí" %}X{% endif %}</td>
+                <td><para style="P1LB">Serie:  </para></td>
+                <td >{{ answers.590cd3e9f851c25927f4cbcc}}</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><para style="P1LB">Colt - 350  </para></td>
+                <td >{%if answers.590cd3e9f851c25927f4cbd3 == "Sí" %}X{% endif %}</td>
+                <td><para style="P1LB">Serie:  </para></td>
+                <td >{{ answers.590cd3e9f851c25927f4cbd4}}</td>
+                <td></td>
+            </tr>
+    </blockTable>
+    <!-- inicia tabla Revicion de materiales  cobre y fobra -->
+    <blockTable colWidths="193mm">
+      <tr>
+        <td background="aliceblue" align="center">
+          <h3>Revision de Materiales Cobre y Fribra</h3>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable style="herramientas2" colWidths="35mm,14mm,60mm,14mm,55mm,14mm" > 
+        <tr>
+            <td><para style="P1LB">Modems de Cobre</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee118 }}</td>
+            <td><para style="P1LB">Etiqueta para Datos</para></td>
+            <td >{{ answers.590ce86eb43fdd113635f834 }}</td>
+            <td><para style="P1LB">Argollas</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee129 }}</td>
+        </tr>
+        <tr>
+            <td><para style="P1LB">Bajante de Cobre</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce071d }}</td>
+            <td><para style="P1LB">Tensor Aislador con Taquete(Muela)</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce0721 }}</td>
+            <td><para style="P1LB"></para>ONT</td>
+            <td >{{ answers.5911ff81f851c20ec6ce0723 }}</td>
+        </tr>
+        <tr>
+            <td><para style="P1LB">Roseta Marfil</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee11a }}</td>
+            <td><para style="P1LB">Tensores</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee128 }}</td>
+            <td><para style="P1LB">Roseta Doble Portasystem</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce071e }}</td>
+        </tr>
+        <tr>
+            <td><para style="P1LB">Roseta Gris</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee11b }}</td>
+            <td><para style="P1LB">Tubo Protector Ranurado</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee12a }}</td>
+            <td><para style="P1LB">Jumper Optico</para></td>
+            <td >{{ answers.59120526f851c20ec95547d4 }}</td>
+        </tr>
+        <tr>
+            <td><para style="P1LB">DIT con spliter</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee11c }}</td>
+            <td><para style="P1LB">Fusibles</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce0722 }}</td>
+            <td><para style="P1LB">Bajante de Fibra Optica</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce0724 }}</td>
+        </tr>
+        <tr>
+            <td><para style="P1LB">Cordón Marfil</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee11d }}</td>
+            <td><para style="P1LB">Jumper</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce0720 }}</td>
+            <td><para style="P1LB">Sello pasa Muros</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce0725 }}</td>
+        </tr>
+        <tr>
+            <td><para style="P1LB">Cordón Gris</para></td>
+            <td >{{ answers.590b7397b43fdd388b7ee11e}}</td>
+            <td><para style="P1LB">Sujetador con Clavo</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce071f}}</td>
+            <td><para style="P1LB">Tensor para Acometida de Fibra</para></td>
+            <td >{{ answers.5911ff81f851c20ec6ce0726}}</td>
+        </tr>
+    </blockTable>
+
+    <!-- Inicia Tabla de datos del vehículo -->
+    
+    <blockTable style="herramientas" colWidths="48mm,72.5mm,72.5mm">
+        <tr>
+            <td>
+                <blockTable>
+                  <tr>
+                    <td background="aliceblue" align="center">
+                      <h3>Vehículo</h3>
+                    </td>
+                  </tr>
+                </blockTable>
+                <blockTable style="herramientas2">
+                    <tr>
+                      <td><para style="P1LB"><b>Marca</b></para></td>
+                      <td><para style="P1L">{{ answers.590cc0f7b43fdd113554d13e }}</para></td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB"><b>Modelo</b></para></td>
+                      <td><para style="P1L">{{ answers.590cc33cb43fdd113635f82b }}</para></td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB"><b>Tipo</b></para></td>
+                      <td><para style="P1L">{{ answers.590cc0f7b43fdd113554d13e }}</para></td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB"><b>Placas</b></para></td>
+                      <td><para style="P1L">{{ answers.590b77cfb43fdd356ce61de4 }}</para></td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB"><b>Calcomanias</b></para></td>
+                      <td><para style="P1L">{{ answers.590b77cfb43fdd356ce61de6 }}</para></td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB"><b>Polarizado</b></para></td>
+                      <td><para style="P1L">{{ answers.590b77cfb43fdd356ce61de7 }}</para></td>
+                    </tr>
+                  </blockTable>
+            </td>
+            <td>
+                <blockTable>
+                  <tr>
+                    <td background="aliceblue" align="center">
+                      <h3>Imagen Frontal </h3>
+                    </td>
+                  </tr>
+                </blockTable>
+                <blockTable colWidths="72mm">
+                    <tr>
+                      <td>{% if answers.590b78b1f851c2332dd1ebd7.file_url %}<imageAndFlowables imageName="{{answers.590b78b1f851c2332dd1ebd7.file_url}}"   imageWidth="130" imageHeight="100" imageSide="left" />{% endif %}</td>
+                  </tr>
+                    <tr>
+                        <td>{% if answers.590b78b1f851c2332dd1ebd7.file_url %}<para><a href="{{answers.590b78b1f851c2332dd1ebd7.file_url}}" color="blue"> Fotografía Frente</a></para> {% endif %}</td>
+                    </tr>
+                </blockTable>
+            </td>
+            <td>
+                <blockTable>
+                  <tr>
+                    <td background="aliceblue" align="center">
+                      <h3>Imagen Lateral </h3>
+                    </td>
+                  </tr>
+                </blockTable>
+                <blockTable colWidths="72mm">
+                    <tr>
+                     <td>{% if answers.5911f79fb43fdd58c329c1c1.file_url %}<imageAndFlowables imageName="{{answers.5911f79fb43fdd58c329c1c1.file_url}}"   imageWidth="130" imageHeight="100" imageSide="left" />{% endif %}
+                     </td>
+                    </tr>
+                    <tr>
+                        <td>{% if answers.5911f79fb43fdd58c329c1c1.file_url %}<para><a href="{{answers.5911f79fb43fdd58c329c1c1.file_url}}" color="blue"> Fotografía Lateral</a></para> {% endif %}</td>
+                    </tr>
+                </blockTable>
+            </td>
+            
+        </tr>
+    </blockTable>
+
+    <blockTable style="herramientas" colWidths="96mm,96mm">
+        <tr>
+            <td>
+                <blockTable>
+                  <tr>
+                    <td background="aliceblue" align="center">
+                      <h3>Imagen del Tecnico</h3>
+                    </td>
+                  </tr>
+                </blockTable>
+                <blockTable style="herramientas2" colWidths="28mm,6mm">
+                    <tr>
+                        <td><para style="P1LB">Camisa</para></td>
+                        <td >{% if answers.590b7489f851c2331d4dbe3f == "Sí" %}X{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td><para style="P1LB">Pantalón</para></td>
+                        <td >{% if answers.590b7489f851c2331d4dbe40 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td><para style="P1LB">Botas</para></td>
+                        <td >{% if answers.590b7489f851c2331d4dbe41 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td><para style="P1LB">Tatuaje Visible</para></td>
+                        <td >{% if answers.5911ffd2f851c20ecb5a1e38 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                    <tr>
+                        <td><para style="P1LB">Cabello</para></td>
+                        <td >{% if answers.590b7489f851c2331d4dbe44 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                </blockTable>
+
+            </td>
+            <td>
+                <blockTable>
+                  <tr>
+                    <td background="aliceblue" align="center">
+                      <h3>Equipo de Seguridad</h3>
+                    </td>
+                  </tr>
+                </blockTable>
+                <blockTable style="herramientas2" colWidths="38mm,6mm">
+                    <tr>
+                      <td><para style="P1LB">Casco</para></td>
+                      <td >{% if answers.59120034b43fdd6f3bcea230 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB">Chaleco Reflejante</para></td>
+                      <td >{% if answers.59120034b43fdd6f3bcea231 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB">Guantes</para></td>
+                      <td >{% if answers.59120034b43fdd6f3bcea232 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB">Conos</para></td>
+                      <td >{% if answers.59120034b43fdd6f3bcea233 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                    <tr>
+                      <td><para style="P1LB">Banderilla Roja</para></td>
+                      <td >{% if answers.59120034b43fdd6f3bcea234 == "Sí" %}X{% endif %}</td>
+                    </tr>
+                </blockTable>
+            </td>
+        </tr>
+    </blockTable>
+    <blockTable colWidths="193mm">
+      <tr>
+        <td background="aliceblue" align="center">
+          <h3>Observaciones</h3>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="193mm">
+      <tr>
+        <td>
+          <para> {{ answers.590b77cfb43fdd356ce61de8 }}</para>
+        </td>
+      </tr>
+    </blockTable>
+    </story>
+
+</document>

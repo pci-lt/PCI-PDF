@@ -1,0 +1,8 @@
+<image x="0.5cm" y="27.7cm" width="3.5cm"  file="{{ company_logo }}" />
+<fill color="#000000"/>
+<setFont name="Helvetica-Bold" size="10"/>
+<drawCentredString x="10.5cm" y="28.6cm">Listado de Tecnicos</drawCentredString>
+<setFont name="Helvetica" size="8"/>
+<drawRightString x="20.5cm" y="28.2cm">Folio : {{ folio }}</drawRightString>
+<drawRightString x="20.6cm" y="27.8cm">Capturado por: {{ user }}</drawRightString>
+<lines>0.5cm 27.6cm 20.5cm 27.6cm</lines>
